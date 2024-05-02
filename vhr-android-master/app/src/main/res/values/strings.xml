@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">VHR</string>
+    <string name="digits_pass">
+        0123456789.@_
+        ABCDEFGHIJKLMNOPQRSTUVWXYZ
+        abcdefghijklmnopqrstuvwxyz
+    </string>
+    <string name="inputname">请输入用户名</string>
+    <string name="inputpass">请输入密码</string>
+    <string name="inputpass1">请输入密码</string>
+    <string name="title_staff">求职人员信息</string>
+    <string name="title_manage">在职员工信息</string>
+    <string name="title_system">发布</string>
+    <string name="title_statistics">员工信息统计</string>
+    <string name="title_myinfo">个人资料</string>
+    <string name="login_message">阅读并同意</string>
+    <string name="login_terms_of_service">服务条款</string>
+    <string name="exit_login">退出登录</string>
+</resources>

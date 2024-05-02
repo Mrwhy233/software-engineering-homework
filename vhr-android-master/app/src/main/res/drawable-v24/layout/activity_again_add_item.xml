@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/gray"
+        tools:context=".activity.AgainAddItemActivity">
+    
+    <RelativeLayout
+            android:id="@+id/rl1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/blue_500"
+            android:padding="10dp"
+            >
+        
+        <TextView
+                android:id="@+id/tv_cencel"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_alignParentStart="true"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:text="取消"
+                android:textSize="16dp"/>
+        
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="发布"
+                android:textColor="@color/colo_white"
+                android:textSize="18dp"
+                android:textStyle="bold"
+                android:layout_centerInParent="true"/>
+        
+        <Button
+                android:id="@+id/btn_publish"
+                android:layout_width="70dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/bg_btn_oringe_radius50"
+                android:textColor="@color/black"
+                android:text="发布"
+                android:textSize="14dp"/>
+    </RelativeLayout>
+    
+    <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl1">
+        
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="370dp"
+                >
+            
+            <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/shape_white"
+                    android:padding="10dp"
+                    >
+                
+                <ImageView
+                        android:id="@+id/iv_item_img"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:src="@drawable/ic_add_gray_48dp"
+                        android:scaleType="centerCrop"
+                        android:drawablePadding="5dp"
+                        android:padding="10dp"
+                        />
+            
+            </LinearLayout>
+            
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape_white"
+                    android:orientation="vertical"
+                    >
+                
+                <EditText
+                        android:id="@+id/et_item_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="拍卖品名称"
+                        android:padding="10dp"
+                        android:textColor="@color/text_main"
+                        android:textColorHint="@color/text_main1"
+                        android:maxLines="1"
+                        android:textSize="16dp"/>
+                
+                <EditText
+                        android:id="@+id/et_item_des"
+                        android:layout_width="match_parent"
+                        android:layout_height="120dp"
+                        android:background="@null"
+                        android:gravity="start|top"
+                        android:hint="描述一下吧~"
+                        android:padding="10dp"
+                        android:textColor="@color/text_main"
+                        android:textColorHint="@color/text_main1"
+                        android:maxLines="4"
+                        android:textSize="16dp"/>
+            </LinearLayout>
+            
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:background="@drawable/shape_white"
+                    android:orientation="vertical"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="5dp"
+                    >
+                
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+                    
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:padding="5dp"
+                            android:text="分类"
+                            android:textColor="@color/text_main"
+                            android:textSize="16dp"/>
+                    
+                    <!--
+                    spinnerMode="dropdown"下拉框模式
+                    spinnerMode="dialog"对话框模式
+                    -->
+                    <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/sp_item_kind"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@drawable/shape_white"
+                            android:theme="@style/spinner_theme"
+                            android:entries="@array/item_kind"
+                            android:spinnerMode="dropdown"
+                            android:layout_marginRight="5dp"
+                            />
+                
+                </LinearLayout>
+                
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#efefef"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        />
+                
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+                    
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:padding="5dp"
+                            android:text="起拍价"
+                            android:textColor="@color/text_main"
+                            android:textSize="16dp"/>
+                    
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end|center_vertical"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="￥"
+                            android:textColor="@color/colo_money"
+                            android:textSize="14dp"/>
+                    
+                    <EditText
+                            android:id="@+id/et_init_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="end|center_vertical"
+                            android:background="@null"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:maxLength="5"
+                            android:textColor="@color/colo_money"
+                            android:textSize="16dp"/>
+                
+                </LinearLayout>
+                
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#efefef"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        />
+                
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+                    
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:padding="5dp"
+                            android:text="加价幅度"
+                            android:textColor="@color/text_main"
+                            android:textSize="16dp"/>
+                    
+                    <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="end|center_vertical"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:text="￥"
+                            android:textColor="@color/colo_money"
+                            android:textSize="14dp"/>
+                    
+                    <EditText
+                            android:id="@+id/et_markup_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="end|center_vertical"
+                            android:background="@null"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:hint="0"
+                            android:inputType="number"
+                            android:maxLength="5"
+                            android:textColor="@color/colo_money"
+                            android:textSize="16dp"/>
+                
+                </LinearLayout>
+                
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#efefef"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        />
+                
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+                    
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:padding="5dp"
+                            android:text="结束时间"
+                            android:textColor="@color/text_main"
+                            android:textSize="16dp"/>
+                    
+                    <TextView
+                            android:id="@+id/tv_end_time"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right"
+                            android:background="@null"
+                            android:layout_marginRight="5dp"
+                            android:text="2023.03.10"
+                            android:textColor="@color/text_black"
+                            android:textSize="16dp"/>
+                
+                </LinearLayout>
+                
+                <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="#efefef"
+                        android:layout_marginLeft="6dp"
+                        android:layout_marginRight="6dp"
+                        />
+            
+            </LinearLayout>
+        
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,129 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+   
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_marginTop="20dp"
+                >
+            
+            <ImageView
+                    android:id="@+id/iv_item_img"
+                    android:layout_width="200dp"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/test_img1"
+                    android:scaleType="centerCrop"
+                    android:layout_centerHorizontal="true"
+                    />
+            
+            <LinearLayout
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    >
+                
+                <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="拍卖品名称:"
+                        android:textSize="18dp"
+                        android:layout_marginLeft="100dp"
+                        android:gravity="right"
+                        />
+                
+                <TextView
+                        android:id="@+id/tv_item_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="拍卖品1"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        />
+            </LinearLayout>
+    
+            <LinearLayout
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    >
+        
+                <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="发布者:"
+                        android:textSize="18dp"
+                        android:layout_marginLeft="100dp"
+                        android:gravity="right"
+                        />
+        
+                <TextView
+                        android:id="@+id/tv_owner_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="发布者名字"
+                        android:textSize="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:textStyle="bold"
+                        />
+            </LinearLayout>
+    
+            <LinearLayout
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    >
+        
+                <TextView
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:text="成交价格:"
+                        android:textSize="18dp"
+                        android:layout_marginLeft="100dp"
+                        android:gravity="right"
+                        />
+                <TextView
+                        android:layout_width="10dp"
+                        android:layout_height="wrap_content"
+                        android:text="¥"
+                        android:textSize="16dp"
+                        android:textColor="@color/gray_deep"
+                        android:paddingTop="3dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_gravity="right"
+                        />
+        
+                <TextView
+                        android:id="@+id/tv_max_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="999"
+                        android:textColor="@color/state_yellow"
+                        android:textSize="20dp"
+                        android:textStyle="bold"
+                        />
+            </LinearLayout>
+            
+        </LinearLayout>
+        
+        <Button
+            android:id="@+id/btn_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:textAllCaps="false"
+            android:background="@color/blue_500"
+            android:textColor="@color/white"
+            android:text="@string/pay_with_alipay" />
+    </LinearLayout>
+
+</ScrollView>

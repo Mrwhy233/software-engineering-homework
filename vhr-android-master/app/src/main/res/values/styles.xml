@@ -1,0 +1,76 @@
+<resources>
+    
+    <style name="AppBaseTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="tabLayoutStyle_Top">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+    <style name="ClickableTextView">
+        <item name="android:textColor">@drawable/bg_hypertext</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <!--防止开屏页闪屏-->
+    <style name="Theme.FullscreenTheme" parent="AppBaseTheme">
+        <item name="android:windowBackground">@drawable/background_05</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:fullBackupOnly">true</item>
+        <item name="android:screenOrientation">portrait</item>
+        <item name="android:windowSoftInputMode">stateHidden</item>
+        <item name="android:configChanges">orientation|keyboardHidden|screenSize</item>
+    </style>
+
+    <style name="AccountTextStyle">
+        <item name="android:textColor">@color/qq_white</item>
+        <item name="android:textSize">20sp</item>
+        <!--最多显示1行-->
+        <item name="android:maxLines">1</item>
+        <!--垂直滚动条-->
+        <item name="android:scrollbars">vertical</item>
+        <!--单行?-->
+        <item name="android:singleLine">true</item>
+    </style>
+    <!--自定义EditText的下划线-->
+    <style name="Theme.Custom.Control.EditText" parent="Theme.AppCompat.Light">
+        <!--EditText未被激活时的下划线颜色-->
+        <item name="colorControlNormal">@color/transparent</item>
+        <!--EditText激活时的下划线颜色-->
+        <item name="colorControlActivated">@color/transparent</item>
+    </style>
+
+    <style name="LoginEditTextTheme" parent="AccountTextStyle">
+        
+        <item name="android:textColorHint">@color/alpha70_white</item>
+        <!--光标颜色-->
+        <item name="android:textCursorDrawable">@drawable/cursor</item>
+        <item name="android:theme">@style/Theme.Custom.Control.EditText</item>
+        <!--下划线颜色-->
+        <item name="android:backgroundTint">@color/transparent</item>
+        <!--选中文本的背景颜色-->
+        <item name="android:textColorHighlight">@color/alpha90_green</item>
+        <!--<item name="android:textSelectHandle">@color/alpha70_green</item>-->
+        <!--小水滴图标-->
+        <item name="android:textSelectHandleLeft">@drawable/custom_text_select_handle_left_material</item>
+        <item name="android:textColorHighlightInverse">@drawable/custom_text_select_handle_middle_material</item>
+        <item name="android:textSelectHandleRight">@drawable/custom_text_select_handle_right_material</item>
+        <!--行间距 默认间距的倍数-->
+        <!--android:lineSpacingMultiplier="20"-->
+        <!--行间距 固定值-->
+        <!--<item name="android:lineSpacingExtra">10dp</item>-->
+    </style>
+
+</resources>

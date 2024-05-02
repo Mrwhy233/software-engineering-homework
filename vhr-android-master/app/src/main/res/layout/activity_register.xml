@@ -1,0 +1,168 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/text_main"
+    tools:context=".activity.RegisterActivity">
+
+    <LinearLayout
+        android:id="@+id/ll_title_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingRight="10dp"
+            android:text="@string/app_name"
+            android:textColor="@android:color/white"
+            android:textSize="32dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/ll_title_layout"
+        android:gravity="center"
+        android:padding="25dp"
+        android:layout_marginTop="120dp"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/underline"
+            >
+
+            <EditText
+                android:id="@+id/username_text1"
+                style="@style/LoginEditTextTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/input_account_edit_text_height"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/iv_clear_username"
+                android:gravity="center"
+                android:hint="@string/inputname" />
+
+            <ImageView
+                android:id="@+id/iv_clear_username"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="40dp"
+                android:src="@mipmap/clear"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/underline"
+            android:layout_marginTop="12dp"
+            >
+
+            <EditText
+                android:id="@+id/userpass_text1"
+                style="@style/LoginEditTextTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/input_account_edit_text_height"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/iv_clear_password"
+                android:gravity="center"
+                android:hint="@string/inputpass" />
+
+            <ImageView
+                android:id="@+id/iv_clear_password"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="40dp"
+                android:src="@mipmap/clear"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/underline"
+            android:layout_marginTop="12dp"
+            >
+
+            <EditText
+                android:id="@+id/userpass_text2"
+                style="@style/LoginEditTextTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/input_account_edit_text_height"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@+id/iv_clear_password2"
+                android:gravity="center"
+                android:hint="@string/inputpass1" />
+
+            <ImageView
+                android:id="@+id/iv_clear_password2"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="40dp"
+                android:src="@mipmap/clear"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="60dp">
+
+            <Button
+                android:id="@+id/back_login"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"
+                android:text="返回登录"/>
+
+            <Button
+                android:id="@+id/btn_reg"
+                android:textStyle="bold"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:textColor="@android:color/white"
+                android:textSize="20dp"
+                android:text="确定注册"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

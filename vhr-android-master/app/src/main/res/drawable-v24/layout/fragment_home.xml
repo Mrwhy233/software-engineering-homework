@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        tools:context=".fragment.HomeFragment">
+
+    <!--
+    tabMode的属性值：
+        1.fixed：标题固定，不可滑动
+        2.scrollable：可滑动，小于等于5个时默认靠左固定
+        3.auto：自动，小于等于5个时默认居中固定，大于则可滑动
+    tabGravity设置固定的位置
+    tabIndicatorColor：标签被选中时下划线的颜色
+    -->
+    <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tl_top_nav"
+            app:tabSelectedTextColor="@color/blue_500"
+            app:tabTextColor="@color/gray"
+            app:tabTextAppearance="@style/tabLayoutStyle_Top"
+            app:tabIndicatorColor="@color/blue_500"
+            app:tabIndicatorHeight="5dp"
+            app:tabIndicatorFullWidth="false"
+            app:tabMode="auto"
+            app:tabGravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+    
+    <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/tl_top_nav"
+            />
+    
+</RelativeLayout>

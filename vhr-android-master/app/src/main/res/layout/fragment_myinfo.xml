@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/my_header_background"
+        android:layout_width="match_parent"
+        android:layout_height="280dp"
+        android:background="@drawable/mine_background" />
+
+    <LinearLayout
+        android:id="@+id/my_operator_message_layout"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_below="@id/my_header_background"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="-115dp"
+        android:background="@drawable/rounded_rectangle"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/role"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text=""
+            android:textSize="15sp" />
+
+    </LinearLayout>
+    <!--    把这一整个LinearLayout作为按钮-->
+
+    <LinearLayout
+        android:id="@+id/my_modify_message_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/my_header_background"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/button_pressed_selector">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/modify_green" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:text="修改信息"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/arrow_right_grey" />
+    </LinearLayout>
+    <!--    把这一整个LinearLayout作为按钮-->
+    <LinearLayout
+        android:id="@+id/my_operator_operate_layout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@id/my_header_background"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/button_pressed_selector">
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/admin_blue" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:text="设置"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/arrow_right_grey" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/exitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:background="@drawable/button_pressed_selector"
+        android:stateListAnimator="@null"
+        android:text="@string/exit_login"
+        android:textColor="@color/red" />
+
+    <com.example.vhr.utils.CricleImage
+        android:id="@+id/my_operator_avatar"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignTop="@id/my_operator_message_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-50dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/background" />
+
+<!--    <ImageView-->
+<!--        android:id="@+id/my_operator_avatar"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="100dp"-->
+<!--            android:layout_alignTop="@id/my_operator_message_layout"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:layout_marginTop="-50dp"-->
+<!--            android:scaleType="fitXY"-->
+<!--        ></ImageView>-->
+
+</RelativeLayout>

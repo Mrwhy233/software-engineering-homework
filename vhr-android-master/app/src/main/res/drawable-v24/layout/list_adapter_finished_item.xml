@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.example.auction.util.MyFinishedScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:id="@+id/view_scrollview"
+        >
+    
+    <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="140dp"
+            >
+    
+        <LinearLayout
+                android:id="@+id/ll_left"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:orientation="horizontal"
+                android:weightSum="20">
+        
+            <!--左侧图片-->
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:padding="10dp"
+                    android:layout_weight="8">
+    
+                <ImageView
+                        android:id="@+id/iv_finished_item_list_img"
+                        android:layout_width="130dp"
+                        android:layout_height="130dp"
+                        android:scaleType="centerCrop"
+                        />
+
+            </LinearLayout>
+        
+            <!--右侧文字-->
+            <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_weight="11"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:weightSum="10"
+                    >
+    
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="4"
+                        android:orientation="vertical"
+                        >
+    
+                    <TextView
+                            android:id="@+id/tv_finished_item_list_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="拍卖品名"
+                            android:textColor="#000"
+                            android:textSize="20dp"
+                            android:ellipsize="end"
+                            android:maxLines="2"
+                            />
+        
+                    <TextView
+                            android:id="@+id/tv_finished_item_list_des"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="拍卖品描述"
+                            android:textColor="@color/text_gray"
+                            android:textSize="16dp"
+                            android:ellipsize="end"
+                            android:maxLines="1"
+                            />
+    
+                </LinearLayout>
+    
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        android:orientation="horizontal">
+        
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/text_gray"
+                            android:gravity="right"
+                            android:text="成交价："
+                            android:textStyle="italic"
+                            android:textSize="14dp"/>
+        
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:layout_marginRight="3dp"
+                            android:textColor="@color/text_red"
+                            android:text="¥"
+                            android:textSize="14dp"
+                            android:textStyle="bold"
+                            />
+        
+                    <TextView
+                            android:id="@+id/tv_finished_item_list_max_price"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:textColor="@color/text_red"
+                            android:text="666"
+                            android:textSize="20dp"
+                            android:textStyle="bold"
+                            />
+    
+                </LinearLayout>
+    
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        >
+        
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_marginRight="3dp"
+                            android:text="发布者"
+                            android:textSize="14dp"
+                            android:textColor="@color/text_oringe"
+                            android:textStyle="italic"
+                            />
+        
+                    <TextView
+                            android:id="@+id/tv_finished_item_list_owner"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="left"
+                            android:text="发布者名字"
+                            android:textSize="14dp"
+                            android:textColor="@color/text_gray"
+                            android:textStyle="bold"
+                            />
+    
+                </LinearLayout>
+    
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="2"
+                        >
+        
+                    <TextView
+                            android:id="@+id/tv_finished_item_list_endtime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="left"
+                            android:text="2023.02.22 12:12"
+                            android:textSize="14dp"
+                            android:textColor="@color/text_oringe"
+                            android:textStyle="bold"
+                            />
+        
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_marginLeft="3dp"
+                            android:text="结束"
+                            android:textSize="14dp"
+                            android:textColor="@color/text_gray"
+                            android:textStyle="italic"
+                            />
+    
+                </LinearLayout>
+
+            </LinearLayout>
+    
+        </LinearLayout>
+        
+        <TextView
+                android:id="@+id/tv_finish_tips"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/state_yellow"
+                android:layout_toLeftOf="@+id/rl_right"
+                android:text="等待买家付款"
+                android:textColor="@color/white"
+                android:textSize="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="0dp"
+                android:padding="5dp"
+                />
+    
+        <LinearLayout
+                android:id="@+id/rl_right"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toRightOf="@+id/ll_left"
+                >
+    
+            <ImageButton
+                    android:id="@+id/ibtn_pay"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:padding="20dp"
+                    android:background="@color/blue_500"
+                    android:src="@mipmap/ic_pay"
+                    android:scaleType="centerInside"
+                    />
+            
+            <!--<ImageButton
+                    android:id="@+id/ibtn_enter_finish"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/blue_500"
+                    android:src="@drawable/ic_finished"
+                    />-->
+    
+            <ImageButton
+                    android:id="@+id/ibtn_delete_finished_item"
+                    android:layout_width="80dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/colo_red"
+                    android:src="@drawable/ic_delete"
+                    />
+        </LinearLayout>
+        
+    </RelativeLayout>
+    
+</com.example.auction.util.MyFinishedScrollView>

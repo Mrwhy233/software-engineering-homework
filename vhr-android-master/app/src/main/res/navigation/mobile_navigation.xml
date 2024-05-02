@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_staff"
+    tools:ignore="UnusedNavigation">
+
+    <fragment
+        android:id="@+id/navigation_staff"
+        android:name="com.example.vhr.fragment.staff.StaffFragment"
+        android:label="@string/title_staff"
+        tools:layout="@layout/fragment_staff" />
+
+    <fragment
+        android:id="@+id/navigation_manage"
+        android:name="com.example.vhr.fragment.manage.ManageFragment"
+        android:label="@string/title_manage"
+        tools:layout="@layout/fragment_manage" />
+
+    <fragment
+        android:id="@+id/navigation_publish"
+        android:name="com.example.vhr.fragment.Publish.PublishFragment"
+        android:label="@string/title_system"
+        tools:layout="@layout/fragment_publish" />
+
+    <fragment
+        android:id="@+id/navigation_statistics"
+        android:name="com.example.vhr.fragment.statistics.StatisticsFragment"
+        android:label="@string/title_statistics"
+        tools:layout="@layout/fragment_statistics" />
+
+    <fragment
+        android:id="@+id/navigation_myinfo"
+        android:name="com.example.vhr.fragment.myinfo.MyInfoFragment"
+        android:label="@string/title_myinfo"
+        tools:layout="@layout/fragment_myinfo" />
+</navigation>

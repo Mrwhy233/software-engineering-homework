@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:tools="http://schemas.android.com/tools"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_04"
+                tools:context=".activity.LoginActivity">
+    
+    <LinearLayout
+            android:id="@+id/ll_title_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginTop="30dp">
+        
+        <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/icon_auction"/>
+        
+        <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:paddingRight="10dp"
+                android:text="@string/app_name"
+                android:textColor="@android:color/white"
+                android:textSize="32dp"/>
+    
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_title_layout"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginEnd="25dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/underline"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_input_username"
+                style="@style/LoginEditTextTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/input_account_edit_text_height"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:gravity="center"
+                android:hint="@string/username" />
+
+            <ImageView
+                android:id="@+id/iv_clear_username"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="40dp"
+                android:src="@mipmap/clear" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/underline"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_input_password"
+                style="@style/LoginEditTextTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/input_account_edit_text_height"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="10dp"
+                android:digits="@string/digits_pass"
+                android:gravity="center"
+                android:hint="@string/userpass"
+                android:longClickable="false" />
+
+            <ImageView
+                android:id="@+id/iv_clear_password"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_toStartOf="@id/cb_login_open_eye"
+                android:src="@mipmap/clear" />
+
+            <CheckBox
+                android:id="@+id/cb_login_open_eye"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:background="@drawable/password_eye"
+                android:button="@null" />
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="60dp"
+            android:background="@drawable/blue_button_nomal"
+            android:text="@string/login"
+            android:textColor="@android:color/white"
+            android:textSize="20dp" />
+
+
+    </LinearLayout>
+
+    
+    <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="30dp"
+            android:background="@drawable/underline"
+            >
+    
+        <RadioGroup
+                android:id="@+id/rg_power"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                >
+        
+            <RadioButton
+                    android:id="@+id/rb_admin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="管理员"
+                    android:textSize="16dp"
+                    android:textColor="@color/alpha70_white"
+                    android:buttonTint="@color/alpha70_white"
+                    android:checked="false"
+                    />
+            <RadioButton
+                    android:id="@+id/rb_user"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="用户"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="10dp"
+                    android:textColor="@color/alpha70_white"
+                    android:buttonTint="@color/alpha70_white"
+                    android:checked="true"
+                    />
+    
+        </RadioGroup>
+    
+        <TextView
+                android:id="@+id/tv_reg"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="16dp"
+                android:gravity="center"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="10dp"
+                android:text="@string/login_register"
+                android:textStyle="bold"
+                android:textColor="@color/alpha90_blue"
+                />
+        
+    </LinearLayout>
+    
+    
+    <!--底部服务条款
+    <LinearLayout
+            android:id="@+id/ll_terms_of_service_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="42.7dp">
+        
+        <TextView
+                android:id="@+id/login_read_and_apply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/login_message"
+                android:textColor="@android:color/white"
+                />
+        
+        <TextView
+                android:id="@+id/tv_terms_of_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="start|center_vertical"
+                android:text="@string/login_terms_of_service"
+                android:textColor="@drawable/bg_hypertext"
+                style="@style/ClickableTextView"/>
+    
+    </LinearLayout>
+    -->
+
+</RelativeLayout>

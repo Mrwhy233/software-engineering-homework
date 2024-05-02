@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    
+    <!--顶栏-->
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+        <!--左边图标-->
+        <RelativeLayout
+                android:id="@+id/btn_home"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@color/blue_500"
+                android:padding="7dp">
+    
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="首页"
+                    />
+        </RelativeLayout>
+        
+        <!--标题-->
+        <TextView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="40dp"
+                android:background="@color/blue_500"
+                android:textStyle="bold"
+                android:text="星星拍卖城"
+                android:textColor="@color/white"
+                android:gravity="center"
+                android:textSize="16sp"/>
+        
+        <RelativeLayout
+                android:id="@+id/btn_mine"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@color/blue_500"
+                android:padding="7dp">
+    
+            <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:contentDescription="我的"
+                    />
+        </RelativeLayout>
+    </LinearLayout>
+    
+</LinearLayout>

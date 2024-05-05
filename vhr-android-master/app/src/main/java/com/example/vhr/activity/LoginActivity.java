@@ -37,7 +37,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LoginActivity extends AppCompatActivity {
-
+    private String realCode;
     private ImageButton btn_login;
     private ImageView mClearUserNameView, mClearPasswordView;
     private EditText et_input_username, et_input_password;
@@ -47,7 +47,8 @@ public class LoginActivity extends AppCompatActivity {
     private TransitionDrawable transitionDrawable;
     private Admin admin;
     //private boolean isAutoLogin = false;
-
+    private EditText mEtloginactivityPhonecodes;
+    private ImageView mIvloginactivityShowcode;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         supportRequestWindowFeature(Window.FEATURE_NO_TITLE);//隐藏标题栏
@@ -56,12 +57,30 @@ public class LoginActivity extends AppCompatActivity {
 
         findViewId();
         init();
-
+        initView();
         mEyeView.setOnCheckedChangeListener(new eyeClick());
         btn_login.setOnClickListener(new loginButton());
+        mIvloginactivityShowcode.setImageBitmap(Code.getInstance().createBitmap());
+        realCode = Code.getInstance().getCode().toLowerCase();
+
 
     }
+    private void initView(){
+        mEtloginactivityPhonecodes = findViewById(R.id.et_loginactivity_phoneCodes);
+        mIvloginactivityShowcode = findViewById(R.id.iv_loginactivity_showCode);
 
+        mIvloginactivityShowcode.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                switch(v.getId()){
+                    case R.id.iv_loginactivity_showCode:
+                        mIvloginactivityShowcode.setImageBitmap(Code.getInstance().createBitmap());
+                        realCode = Code.getInstance().getCode().toLowerCase();
+                        break;
+                }
+            }
+        });
+    }
     private void init() {
         SharedPreferences spf = getSharedPreferences("loginData", MODE_PRIVATE);
 //        boolean isAutoLogin = spf.getBoolean("isAutoLogin", false);
@@ -89,6 +108,8 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
+
+
     }
 
     private void findViewId() {
@@ -101,6 +122,7 @@ public class LoginActivity extends AppCompatActivity {
         mClearUserNameView = findViewById(R.id.iv_clear_username);
         mClearPasswordView = findViewById(R.id.iv_clear_password);
         mEyeView = findViewById(R.id.cb_login_open_eye);
+
     }
 
     //登录判 定

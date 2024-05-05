@@ -20,21 +20,15 @@ plugins {
     id 'com.android.application'
 }
 
-android {
-<<<<<<< HEAD
+android{
     compileSdk 32
-=======
     compileSdk 33
->>>>>>> main
 
     defaultConfig {
         applicationId "com.example.vhr"
         minSdk 21
-<<<<<<< HEAD
         targetSdk 32
-=======
         targetSdk 33
->>>>>>> main
         versionCode 1
         versionName "1.0"
 

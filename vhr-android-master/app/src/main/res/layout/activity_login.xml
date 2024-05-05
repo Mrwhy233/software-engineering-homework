@@ -150,6 +150,40 @@
 <!--                style="@style/ClickableTextView"/>-->
 
 <!--        </LinearLayout>-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal">
+            <!-- 第四个文本编辑框  输入验证码 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/et_loginactivity_phoneCodes"
+                    android:layout_width="196dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_weight="3"
+                    android:hint="请输入验证码"
+                    android:textColor="#000000"
+                    android:textColorHint="#bcbcbc" />
+
+                <ImageView
+                    android:id="@+id/iv_loginactivity_showCode"
+                    android:layout_width="95dp"
+                    android:layout_height="63dp"
+                    android:layout_marginTop="-10dp"
+                    android:layout_weight="1.5"
+                    android:clickable="true"
+                    android:onClick="onClick"
+                    tools:ignore="OnClick" />
+            </LinearLayout>
+        </LinearLayout>
 
         <LinearLayout
             android:layout_width="60dp"

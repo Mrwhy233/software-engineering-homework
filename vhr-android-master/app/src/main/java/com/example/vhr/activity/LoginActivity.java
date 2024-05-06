@@ -13,6 +13,7 @@ import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
@@ -42,6 +43,8 @@ public class LoginActivity extends AppCompatActivity {
     private ImageView mClearUserNameView, mClearPasswordView;
     private EditText et_input_username, et_input_password;
     private CheckBox mEyeView, autologin;
+
+    private Button rEgister;
     private String username = "";
     private String userpass = "";
     private TransitionDrawable transitionDrawable;
@@ -59,6 +62,7 @@ public class LoginActivity extends AppCompatActivity {
         init();
         initView();
         mEyeView.setOnCheckedChangeListener(new eyeClick());
+        rEgister.setOnClickListener(new regTextView());
         btn_login.setOnClickListener(new loginButton());
         mIvloginactivityShowcode.setImageBitmap(Code.getInstance().createBitmap());
         realCode = Code.getInstance().getCode().toLowerCase();
@@ -114,7 +118,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private void findViewId() {
         btn_login = (ImageButton) findViewById(R.id.btn_login);
-
+        rEgister=(Button) findViewById(R.id.btn_register);
         et_input_username = (EditText) findViewById(R.id.et_input_username);
         et_input_password = (EditText) findViewById(R.id.et_input_password);
 //        autologin = (CheckBox) findViewById(R.id.login_auto);

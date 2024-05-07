@@ -198,9 +198,7 @@
             android:text="注册"
             android:onClick="regTextView" />
       
-      
-            </LinearLayout>
-        </LinearLayout>
+
 
         <LinearLayout
             android:layout_width="60dp"

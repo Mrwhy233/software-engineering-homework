@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/alpha80_gray"
+    android:background="@drawable/background_05"
     tools:context=".activity.LoginActivity">
 
     <LinearLayout
@@ -16,10 +16,10 @@
         <com.example.vhr.utils.CricleImage
             android:id="@+id/imageView"
             android:layout_width="210dp"
-            android:layout_height="175dp"
+            android:layout_height="210dp"
             android:layout_marginLeft="100dp"
-            android:layout_marginTop="60dp"
-            android:src="@mipmap/c2" />
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/cxxx" />
 
 <!--        <TextView-->
 <!--            android:id="@+id/textView3"-->

@@ -124,7 +124,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="-50dp"
         android:scaleType="fitXY"
-        android:src="@drawable/background" />
+        android:src="@drawable/shuodedaoli" />
 
 <!--    <ImageView-->
 <!--        android:id="@+id/my_operator_avatar"-->

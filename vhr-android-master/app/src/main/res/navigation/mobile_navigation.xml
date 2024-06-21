@@ -35,4 +35,5 @@
         android:name="com.example.vhr.fragment.myinfo.MyInfoFragment"
         android:label="@string/title_myinfo"
         tools:layout="@layout/fragment_myinfo" />
+
 </navigation>

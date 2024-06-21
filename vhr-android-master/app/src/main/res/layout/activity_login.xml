@@ -197,7 +197,6 @@
             android:layout_height="wrap_content"
             android:text="注册"
             android:onClick="regTextView" />
-      
 
 
         <LinearLayout
